@@ -256,6 +256,7 @@ public:
 			
 			case Immutable:
 				return "immutable(" ~ s ~ ")";
+
 		}
 	}
 	

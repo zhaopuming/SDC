@@ -4,7 +4,7 @@
 // Tests the casting of booleans to ints. 
 
 int main() {
-	bool a = false, b = true;
+	var bool a = false, b = true;
 	if (cast(int) a != 0) {
 		return 1;
 	}

@@ -42,6 +42,9 @@ auto parseBasicType(TokenRange)(ref TokenRange trange) if(isTokenRange!TokenRang
 		case Immutable :
 			return processQualifier!(TypeQualifier.Immutable)();
 		
+		case Var :
+			return processQualifier!(TypeQualifier.Mutable)();
+
 		case Inout :
 			return processQualifier!(TypeQualifier.Mutable)();
 		

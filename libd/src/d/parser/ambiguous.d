@@ -51,6 +51,7 @@ typeof(handler(AstType.init)) parseAmbiguous(alias handler, R)(ref R trange) if(
 		// Type qualifiers
 		case Const :
 		case Immutable :
+		case Var :
 		case Inout :
 		case Shared :
 			auto location = trange.front.location;
@@ -135,7 +136,7 @@ auto parseDeclarationOrExpression(alias handler, R)(ref R trange) if(isTokenRang
 			// XXX: lolbug !
 			goto case Auto;
 		
-		case Auto, Static, Const, Immutable, Inout, Shared :
+		case Auto, Static, Const, Immutable, Var, Inout, Shared :
 			return handler(trange.parseDeclaration());
 		
 		default :

@@ -4,7 +4,7 @@
 // Tests increment on types smaller than int.
 
 int main() {
-	byte b;
+	var byte b;
 	b++;
 	
 	return b;

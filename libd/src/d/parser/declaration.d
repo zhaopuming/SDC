@@ -92,6 +92,10 @@ Declaration parseDeclaration(R)(ref R trange) if(isTokenRange!R) {
 			case Shared :
 				qualifier = TypeQualifier.Shared;
 				goto HandleTypeQualifier;
+
+		  case Var:
+				qualifier = TypeQualifier.Mutable;
+				goto HandleTypeQualifier;
 			
 			HandleTypeQualifier: {
 				auto lookahead = trange.save;
@@ -448,7 +452,11 @@ private Declaration parseFunction(R)(ref R trange, Location location, StorageCla
 			case Shared :
 				qualifier = TypeQualifier.Shared;
 				goto HandleTypeQualifier;
-			
+
+		  case Var :
+				qualifier = TypeQualifier.Mutable;
+				goto HandleTypeQualifier;
+		
 			HandleTypeQualifier: {
 				// We have a qualifier(type) name type of declaration.
 				stc.hasQualifier = true;

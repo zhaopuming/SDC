@@ -880,7 +880,7 @@ private auto parseIsExpression(R)(ref R trange) {
 			trange.popFront();
 			
 			switch(trange.front.type) {
-				case Struct, Union, Class, Interface, Enum, Function, Delegate, Super, Const, Immutable, Inout, Shared, Return :
+				case Struct, Union, Class, Interface, Enum, Function, Delegate, Super, Const, Immutable, Var, Inout, Shared, Return :
 					assert(0, "Not implemented.");
 				
 				default :

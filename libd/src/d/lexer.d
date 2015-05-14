@@ -49,6 +49,9 @@ enum TokenType {
 	Version, Void, Volatile,
 	Wchar, While, With,
 	__File__, __Line__, __Gshared, __Traits, __Vector, __Parameters,
+
+	/// Venus
+	Var,
 	
 	/// Operators.
 	Slash,				// /
@@ -1029,6 +1032,7 @@ auto getKeywordsMap() {
 		"union"				: Union,
 		"unittest"			: Unittest,
 		"ushort"			: Ushort,
+		"var"						: Var,
 		"version"			: Version,
 		"void"				: Void,
 		"volatile"			: Volatile,

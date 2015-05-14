@@ -6,7 +6,7 @@
 extern(C) size_t strlen(const char* s);
 
 int main() {
-	string str = "test";  
+	var string str = "test";  
 	if(str.length != 4) {
 		return 1;
 	}

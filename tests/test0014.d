@@ -2,7 +2,7 @@
 //T retval:58
 //T has-passed:yes
 
-int foo(int a) {
+int foo(var int a) {
 	if(a == 56 || a++) {
 		a++;
 	}
